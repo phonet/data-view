@@ -1,4 +1,4 @@
-# integrated-manage-h5
+# vue编写的mobile端数据可视化项目（vue+vant+echarts）
 
 ## Project setup
 ```
@@ -7,7 +7,7 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+yarn start
 ```
 
 ### Compiles and minifies for production
