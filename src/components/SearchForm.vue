@@ -11,23 +11,54 @@ export default {
             type: Boolean,
             default: true,
         },
+        value: {
+            type: String,
+            default: '0',
+        },
+        options: {
+            type: Array,
+            default: () => {
+                return [
+                    { text: '全部', value: '0' },
+                    { text: '门诊', value: '1' },
+                    { text: '住院', value: '2' },
+                ];
+            },
+        },
     },
 
     data() {
         return {
             value1: 0,
-            value2: 'ALL',
+            value2: this.value,
             option1: [
                 { text: '玉溪市', value: 0 },
                 { text: '昆明市', value: 1 },
                 { text: '丽江市', value: 2 },
             ],
-            option2: [
-                { text: '全部', value: 'ALL' },
-                { text: '门诊', value: '1' },
-                { text: '住院', value: '2' },
-            ],
+            option2: this.options,
         };
+    },
+    methods: {
+        changeSelect2(value) {
+            console.log(value);
+            console.log(this.value2);
+        },
+    },
+    computed: {
+        // options2Obj() {
+        //     const res = {
+        //         value: this.option.value || 0,
+        //         options: this.option.options || [
+        //             { text: '全部', value: 0 },
+        //             { text: '门诊', value: 1 },
+        //             { text: '住院', value: 2 },
+        //         ],
+        //     };
+        //     console.log('----');
+        //     console.log(res);
+        //     return res;
+        // },
     },
 };
 </script>
@@ -38,8 +69,9 @@ export default {
             <van-dropdown-item v-model="value1" :options="option1" />
             <van-dropdown-item
                 v-model="value2"
-                :options="option2"
+                :options="options"
                 v-if="this.filterHospitalType"
+                @change="changeSelect2"
             />
         </van-dropdown-menu>
         <div class="date">近1个月</div>

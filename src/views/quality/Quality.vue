@@ -17,7 +17,14 @@ export default {
 
 <template>
     <div class="quality-page">
-        <SearchForm />
+        <SearchForm
+            :options="[
+                { text: '市级医疗机构', value: '0' },
+                { text: '县级医疗机构', value: '1' },
+                { text: '乡镇级医疗机构', value: '2' },
+                { text: '民营医疗机构', value: '3' },
+            ]"
+        />
         <div class="title-wrap">医疗服务质量</div>
         <van-grid :column-num="2" gutter="16">
             <van-grid-item>
@@ -111,30 +118,50 @@ export default {
         &:first-child {
             // background-color: #00b4ff;
             .van-grid-item__content {
-                background-image: linear-gradient(
-                    178deg,
-                    #00b4ff 0%,
-                    #008fff 97%
-                );
+                position: relative;
+                background: linear-gradient(178deg, #00b4ff 0%, #008fff 97%);
+                &::before {
+                    content: ' ';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    background-image: url('../../assets/blue1@2x.png');
+                    background-repeat: no-repeat;
+                    background-position: right top;
+                    background-size: 36%;
+                }
             }
         }
         &:nth-child(2) {
             .van-grid-item__content {
-                background-image: linear-gradient(
-                    162deg,
-                    #14cae0 23%,
-                    #02b0d0 64%
-                );
+                position: relative;
+                background: linear-gradient(162deg, #14cae0 23%, #02b0d0 64%);
+                &::before {
+                    content: ' ';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    background-image: url('../../assets/green1@2x.png');
+                    background-repeat: no-repeat;
+                    background-position: right top;
+                    background-size: 36%;
+                }
             }
         }
     }
     .number {
+        position: relative;
         font-size: 18px;
         color: #ffffff;
         margin: 4px 0;
     }
     .small-title,
     .unit {
+        position: relative;
         font-size: 12px;
         color: #fff;
     }
