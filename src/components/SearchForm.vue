@@ -25,6 +25,30 @@ export default {
                 ];
             },
         },
+        rightFilter: {
+            type: Boolean,
+            default: false,
+        },
+        dateVlue: {
+            type: String,
+            default: '4',
+        },
+        dateOptions: {
+            type: Array,
+            default: () => {
+                return [
+                    { text: '2016年', value: '0' },
+                    { text: '2017年', value: '1' },
+                    { text: '2018年', value: '2' },
+                    { text: '2019年', value: '3' },
+                    { text: '2020年', value: '4' },
+                    { text: '2021年', value: '5' },
+                    { text: '2022年', value: '6' },
+                    { text: '2023年', value: '7' },
+                    { text: '2024年', value: '8' },
+                ];
+            },
+        },
     },
 
     data() {
@@ -37,6 +61,8 @@ export default {
                 { text: '丽江市', value: 2 },
             ],
             option2: this.options,
+            value3: this.dateVlue,
+            option3: this.dateOptions,
         };
     },
     methods: {
@@ -73,8 +99,9 @@ export default {
                 v-if="this.filterHospitalType"
                 @change="changeSelect2"
             />
+            <van-dropdown-item v-if="this.rightFilter" v-model="value3" :options="option3" />
         </van-dropdown-menu>
-        <div class="date">近1个月</div>
+        <div class="date" v-if="!this.rightFilter">近1个月</div>
     </div>
 </template>
 
@@ -91,19 +118,27 @@ export default {
         font-size: 14px;
         color: #949fd5;
         margin-left: 8px;
+
+        flex: 1;
+        max-width: 80px;
+        text-align: right;
     }
 }
 .van-dropdown-menu {
-    flex: 1;
+    flex: 2;
     overflow: hidden;
 }
 .van-dropdown-menu__item {
-    justify-content: flex-start;
+    &:nth-child(1) {
+        justify-content: flex-start;
+    }
+    &:nth-child(2) {
+        //justify-content: flex-start;
+    }
+    &:nth-child(3) {
+        justify-content: flex-end;
+    }
     padding-right: 8px;
-    // margin-left: 8px;
-    /* &:first-child {
-        margin-left: 0;
-    } */
 }
 .van-dropdown-menu__title {
     padding-left: 0;

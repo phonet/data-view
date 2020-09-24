@@ -15,14 +15,23 @@ export default {
     props: {},
     data() {
         return {
-            layerColor: '#2B3B6D',
+            active:0,
+            layerColor: '#314585',
             current1: 0,
             current2: 0,
             current3: 0,
+            current4: 0,
+            current5: 0,
+            current6: 0,
+            current7: 0,
+            current8: 0,
+            current9: 0,
+            current10: 0,
+            current11: 0,
             size: 20,
             color: {
-                '0%': '#fff',
-                '100%': '#A6FFF8',
+                '19%': '#1EBBDA',
+                '97%': '#4BF7A5',
             },
         };
     },
@@ -45,8 +54,8 @@ export default {
                     <van-grid-item>
                         <van-image
                             width="19"
-                            height="16"
-                            :src="require('../../../assets/icon/icon_mzrc.png')"
+                            height="18"
+                            :src="require('../../../assets/icon/icon_glrs@2x.png')"
                         />
                         <div class="title">管理人数</div>
                         <div class="number">
@@ -55,10 +64,10 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-image
-                            width="18"
+                            width="19"
                             height="18"
                             :src="
-                                require('../../../assets/icon/icon_mzzsr.png')
+                                require('../../../assets/icon/icon_gfglrs@2x.png')
                             "
                         />
                         <div class="title">规范管理人数</div>
@@ -68,7 +77,7 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-circle
-                            v-model="current"
+                            v-model="current1"
                             :rate="32"
                             :stroke-width="90"
                             :speed="100"
@@ -83,10 +92,10 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-image
-                            width="22"
+                            width="19"
                             height="18"
                             :src="
-                                require('../../../assets/icon/icon_cyrc@2x.png')
+                                require('../../../assets/icon/icon_kzmyrs@2x.png')
                             "
                         />
                         <div class="title">控制满意人数</div>
@@ -131,8 +140,8 @@ export default {
                     <van-grid-item>
                         <van-image
                             width="19"
-                            height="16"
-                            :src="require('../../../assets/icon/icon_mzrc.png')"
+                            height="18"
+                            :src="require('../../../assets/icon/icon_glrs@2x.png')"
                         />
                         <div class="title">管理人数</div>
                         <div class="number">
@@ -141,10 +150,10 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-image
-                            width="18"
+                            width="19"
                             height="18"
                             :src="
-                                require('../../../assets/icon/icon_mzzsr.png')
+                                require('../../../assets/icon/icon_gfglrs@2x.png')
                             "
                         />
                         <div class="title">规范管理人数</div>
@@ -154,7 +163,7 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-circle
-                            v-model="current"
+                            v-model="current4"
                             :rate="32"
                             :stroke-width="90"
                             :speed="100"
@@ -169,10 +178,10 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-image
-                            width="22"
+                            width="19"
                             height="18"
                             :src="
-                                require('../../../assets/icon/icon_cyrc@2x.png')
+                                require('../../../assets/icon/icon_kzmyrs@2x.png')
                             "
                         />
                         <div class="title">控制满意人数</div>
@@ -182,7 +191,7 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-circle
-                            v-model="current2"
+                            v-model="current5"
                             :rate="97"
                             :stroke-width="90"
                             :speed="100"
@@ -197,7 +206,7 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-circle
-                            v-model="current3"
+                            v-model="current6"
                             :rate="80"
                             :stroke-width="90"
                             :speed="100"
@@ -242,7 +251,7 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-circle
-                            v-model="current"
+                            v-model="current7"
                             :rate="81"
                             :stroke-width="90"
                             :speed="100"
@@ -287,7 +296,7 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-circle
-                            v-model="current"
+                            v-model="current8"
                             :rate="81"
                             :stroke-width="90"
                             :speed="100"
@@ -332,7 +341,7 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-circle
-                            v-model="current"
+                            v-model="current9"
                             :rate="81"
                             :stroke-width="90"
                             :speed="100"
@@ -377,7 +386,7 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-circle
-                            v-model="current"
+                            v-model="current10"
                             :rate="81"
                             :stroke-width="90"
                             :speed="100"
@@ -422,7 +431,7 @@ export default {
                     </van-grid-item>
                     <van-grid-item>
                         <van-circle
-                            v-model="current"
+                            v-model="current11"
                             :rate="81"
                             :stroke-width="90"
                             :speed="100"

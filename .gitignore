@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 /dist
+/integrated-manage-mobile
 
 
 # local env files

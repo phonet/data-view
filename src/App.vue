@@ -10,6 +10,7 @@ export default {
     },
     beforeCreate() {
         console.log(this.$route.meta.showTab);
+        console.log(this.$route.meta.noFooterMsg)
     },
 
     /*  watch: {
@@ -35,7 +36,9 @@ export default {
             </div>
         </van-sticky>
         <router-view />
-        <div class="footer">2020-08-10 数据已更新</div>
+        <div class="footer" v-if="!$route.meta.noFooterMsg">
+            2020-08-10 数据已更新
+        </div>
     </div>
 </template>
 

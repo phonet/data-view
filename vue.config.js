@@ -1,7 +1,5 @@
 module.exports = {
-    outputDir: 'dist',
-    publicPath:
-        process.env.NODE_ENV === 'production' ? '/integrated-manage-h5/' : '/',
+    // transpileDependencies: ['vue-echarts', 'resize-detector'],
     css: {
         loaderOptions: {
             less: {
@@ -28,5 +26,8 @@ module.exports = {
             },
         },
     },
-    // transpileDependencies: ['vue-echarts', 'resize-detector'],
+
+    productionSourceMap: false,
+    publicPath: '/integrated-manage-mobile',
+    outputDir: 'integrated-manage-mobile'
 };

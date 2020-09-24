@@ -39,7 +39,7 @@ export default {
 
 <template>
     <div class="public-page">
-        <SearchForm />
+        <SearchForm :rightFilter="true"/>
         <TitleBgColor title="居民管理情况" />
         <TotalGrid />
         <TitleBgColor title="重点人群管理情况" />

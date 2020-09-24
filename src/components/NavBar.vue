@@ -1,9 +1,10 @@
 <script>
-import { NavBar } from 'vant';
+import { NavBar,Sticky } from 'vant';
 export default {
     name: 'NavBar',
     components: {
         [NavBar.name]: NavBar,
+        [Sticky.name]:Sticky
     },
     props: {
         title: {
@@ -20,6 +21,7 @@ export default {
 </script>
 
 <template>
+<van-sticky>
     <div class="nav-wrap">
         <van-nav-bar
             left-arrow
@@ -28,6 +30,7 @@ export default {
         >
         </van-nav-bar>
     </div>
+</van-sticky>
 </template>
 
 <style lang="less">
@@ -41,6 +44,7 @@ export default {
     }
     .van-nav-bar__arrow {
         font-size: 24px;
+        margin-left: -3px;
     }
     .van-nav-bar__text {
         flex: 1;
