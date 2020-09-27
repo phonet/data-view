@@ -2,6 +2,7 @@
 node_modules
 /dist
 /integrated-manage-mobile
+/data-view
 
 
 # local env files
